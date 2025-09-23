@@ -25,15 +25,7 @@ def load_question_bank():
             "Q1": {
                 "Type": 0,
                 "Q": "Most likely to give the best advice for a friend in bad mood?",
-                "A": {
-                    "Bálint":0,
-                    "Bella":0,
-                    "Geri":0,
-                    "Herczi":0,
-                    "Hanna":0,
-                    "Koppány":0,
-                    "Márk":0
-                },
+                "A": {},
                 "Status": 0
                 }
         }
@@ -45,9 +37,7 @@ def load_comments():
         with open('database/comments.json', 'r') as f:
             return json.load(f)
     except FileNotFoundError:
-        return {"04/01/2025 10:09:20":{
-            "Geri":"Hello there!"
-        }}
+        return {}
     except Exception as e:
         print(e)
 
@@ -108,15 +98,7 @@ def load_today_poll():
             "Q1": {
                 "Type": 0,
                 "Question": "Most likely to give the best advice for a friend in bad mood?",
-                "Answers": {
-                    "Bálint":0,
-                    "Bella":0,
-                    "Geri":0,
-                    "Herczi":0,
-                    "Hanna":0,
-                    "Koppány":0,
-                    "Márk":0
-                },
+                "Answers": {},
                 "Status": 1
                 }
         }
